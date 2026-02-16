@@ -10,11 +10,21 @@
 
 </div>
 
-<div align="center">
-  <strong>🔥 Action-aware Dynamic Pruning (ADP) is a training-free, plug-and-play solution for accelerating vision-language-action models.</strong>
-</div>
+<p align='center'>
+<img src='./assests/motivation.png' alt='motivation' width='1000px'>
+</p>
+
+**Action-aware Dynamic Pruning (ADP)** is a training-free, plug-and-play method for efficient VLAs. It adaptively prunes redundant visual tokens across manipulation stages by combining text-driven token relevance with an action-aware gating signal from end-effector motion—reducing FLOPs and latency while preserving task success. ADP works out-of-the-box with parallel decoding (e.g., OpenVLA-OFT).
+
+<p align='center'>
+  <img src='./assests/main2.png' alt='overview' width='65%'>
+  <img src='./assests/prune3.png' alt='pruning' width='30%'>
+</p>
 
 ---
+
+
+
 
 # 🎯 Overview
 
