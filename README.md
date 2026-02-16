@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Project Page](https://img.shields.io/badge/Project-Page-Green)](https://github.com/chen7086/VLA-ADP)
+[![Project Page](https://img.shields.io/badge/Project-Page-Green)](https://github.com/TerryPei/VLA-ADP)
 [![ICLR 2026](https://img.shields.io/badge/ICLR-2026-blue)](https://arxiv.org/pdf/2509.22093)
 [![License](https://img.shields.io/badge/License-Apache%202.0-g.svg)](LICENSE.txt)
 
