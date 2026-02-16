@@ -30,16 +30,21 @@
 
 Vision–Language–Action (VLA) models extend large vision–language models to map visual observations and language instructions into executable robot actions. In the mainstream pipeline, a vision encoder produces dense visual tokens, a projector aligns them to the language space, and an LLM fuses modalities to predict actions. However, long multi-modal sequences introduce substantial redundancy in visual tokens, increasing computation, memory usage, and latency.
 
-**Action-aware Dynamic Pruning (ADP)** is a training-free, plug-and-play method for efficient VLAs. It adaptively prunes redundant visual tokens across manipulation stages by combining:
-
-- Text-driven token relevance  
-- Action-aware gating signals derived from end-effector motion  
+**Action-aware Dynamic Pruning (ADP)** is a training-free, plug-and-play method for efficient VLAs. It adaptively prunes redundant visual tokens across manipulation stages by Action-aware gating signals derived from end-effector motion.  
 
 ADP significantly reduces FLOPs and latency while preserving task success rates. It works seamlessly with parallel decoding frameworks such as OpenVLA-OFT.
 
----
+<p align='center'>
+<img src='./assests/libero_table.png' alt='LIBERO Results Table' width='900px'>
+</p>
+
+<p align='center'>
+<img src='./assests/libero.png' alt='LIBERO' width='900px'>
+</p>
 
 ---
+
+
 
 # 🛠 Installation
 
