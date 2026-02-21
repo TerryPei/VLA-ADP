@@ -314,6 +314,27 @@
         redundant tokens at each timestep, reducing computation without sacrificing task success.
       </p>
     </div>
+
+    <!-- Key metrics directly below teaser -->
+    <div class="result-highlights" style="margin-top:2rem;">
+      <div class="result-box">
+        <div class="metric">1.49×</div>
+        <div class="metric-label">Real-world latency speedup<br>(76.9 ms → 51.8 ms)</div>
+      </div>
+      <div class="result-box">
+        <div class="metric">88.3%</div>
+        <div class="metric-label">Real-world success rate<br>(up from 85.8% baseline)</div>
+      </div>
+      <div class="result-box">
+        <div class="metric">1.35×</div>
+        <div class="metric-label">LLM speedup on LIBERO<br>at 30–40% token keep ratio</div>
+      </div>
+      <div class="result-box">
+        <div class="metric">≤0.9%</div>
+        <div class="metric-label">SR drop at 50–70%<br>keep ratio (LIBERO)</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -323,19 +344,10 @@
     <h2 class="section-title has-text-centered">Abstract</h2>
     <hr class="section-divider">
     <p class="abstract-text has-text-centered">
-      Vision–Language–Action (VLA) models extend large vision–language models to map visual
-      observations and language instructions into executable robot actions. In the mainstream
-      pipeline, a vision encoder produces dense visual tokens, a projector aligns them to the
-      language space, and an LLM fuses modalities to predict actions. However, long multi-modal
-      sequences introduce substantial redundancy in visual tokens, increasing computation, memory
-      usage, and latency.
-      <br><br>
       We propose <b>Action-aware Dynamic Pruning (ADP)</b>, a training-free, plug-and-play method
       that adaptively prunes redundant visual tokens across manipulation stages by combining
       <em>text-driven token relevance</em> with an <em>action-aware gating signal</em> derived from
-      end-effector motion. ADP significantly reduces FLOPs and inference latency while preserving
-      task success rates. It works seamlessly with parallel decoding frameworks such as OpenVLA-OFT,
-      requiring no retraining or architectural changes.
+      end-effector motion.
     </p>
   </div>
 </section>
@@ -424,26 +436,6 @@
   <div class="container is-max-desktop">
     <h2 class="section-title has-text-centered">Experimental Results</h2>
     <hr class="section-divider">
-
-    <!-- Highlight metrics -->
-    <div class="result-highlights">
-      <div class="result-box">
-        <div class="metric">1.49×</div>
-        <div class="metric-label">Real-world latency speedup<br>(76.9 ms → 51.8 ms)</div>
-      </div>
-      <div class="result-box">
-        <div class="metric">88.3%</div>
-        <div class="metric-label">Real-world success rate<br>(up from 85.8% baseline)</div>
-      </div>
-      <div class="result-box">
-        <div class="metric">1.35×</div>
-        <div class="metric-label">LLM speedup on LIBERO<br>at 30–40% token keep ratio</div>
-      </div>
-      <div class="result-box">
-        <div class="metric">≤0.9%</div>
-        <div class="metric-label">SR drop at 50–70%<br>keep ratio (LIBERO)</div>
-      </div>
-    </div>
 
     <!-- LIBERO table -->
     <h3 class="has-text-centered" style="font-size:1.2rem; font-weight:600; margin: 2rem 0 0.8rem; color:#333;">
