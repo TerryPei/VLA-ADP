@@ -395,7 +395,7 @@
     <div class="video-grid">
 
       <div class="video-card">
-        <video controls muted playsinline loop preload="metadata">
+        <video controls muted playsinline loop autoplay preload="auto">
           <source src="assests/2025_09_11-19_42_44--openvla_oft--episode=7--success=True--task=put_the_white_mug_on_the_plate_and_put_the_chocola.mp4" type="video/mp4">
         </video>
         <div class="video-label">
@@ -404,7 +404,7 @@
       </div>
 
       <div class="video-card">
-        <video controls muted playsinline loop preload="metadata">
+        <video controls muted playsinline loop autoplay preload="auto">
           <source src="assests/2025_09_11-19_47_37--openvla_oft--episode=4--success=True--task=open_the_top_drawer_and_put_the_bowl_inside.mp4" type="video/mp4">
         </video>
         <div class="video-label">
@@ -413,7 +413,7 @@
       </div>
 
       <div class="video-card">
-        <video controls muted playsinline loop preload="metadata">
+        <video controls muted playsinline loop autoplay preload="auto">
           <source src="assests/2025_09_11-19_57_31--openvla_oft--episode=6--success=True--task=pick_up_the_tomato_sauce_and_place_it_in_the_baske.mp4" type="video/mp4">
         </video>
         <div class="video-label">
@@ -422,7 +422,7 @@
       </div>
 
       <div class="video-card">
-        <video controls muted playsinline loop preload="metadata">
+        <video controls muted playsinline loop autoplay preload="auto">
           <source src="assests/2025_09_11-20_01_43--openvla_oft--episode=9--success=True--task=pick_up_the_black_bowl_next_to_the_plate_and_place.mp4" type="video/mp4">
         </video>
         <div class="video-label">
@@ -533,6 +533,14 @@
 </footer>
 
 <script>
+  // Set all videos to 1.5× speed on load and after each play event
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('video').forEach(v => {
+      v.playbackRate = 1.5;
+      v.addEventListener('play', () => { v.playbackRate = 1.5; });
+    });
+  });
+
   function copyBibTeX() {
     const text = `@article{pei2025action,
   title={Action-aware dynamic pruning for efficient vision-language-action manipulation},
